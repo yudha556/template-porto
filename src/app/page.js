@@ -184,6 +184,23 @@ I like to have my perspective and belief systems challenged so that I see the wo
         </div>
       
       </div>
+
+      {/* Projects */}
+      <div className="h-full w-full bg-Bg2 flex flex-col justofy-center items-center px-16">
+
+      </div>
+
+      {/* Blogs */}
+      <div className="h-full w-full bg-Bg1 flex flex-col justofy-center items-center px-16">
+
+      </div>
+
+      {/* Contact */}
+      <div className="h-full w-full bg-Bg2 flex flex-col justofy-center items-center px-16">
+
+      </div>
+
+      
     </div>
   )
 }
