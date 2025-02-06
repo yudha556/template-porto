@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { MapPin, Student, LinkSimple, DownloadSimple, Monitor, Cube, GameController, PenNib } from "phosphor-react";
+import { MapPin, Student, LinkSimple, DownloadSimple, PaperPlaneTilt   } from "phosphor-react";
 import LogoDisplay from '@/components/logoDisplay';
 import { useRouter, usePathname } from "next/navigation";
 
@@ -104,7 +104,7 @@ export default function Home() {
                             </div>
 
                             <button
-                                className='bg-White rounded-3xl py-4 px-0 mx-6 flex flex-row gap-2 text-black items-center justify-center '
+                                className='bg-White rounded-3xl py-4 px-0 mx-8  flex flex-row gap-2 text-black items-center justify-center '
                             >
                                 Download CV
                                 <DownloadSimple size={24} />
@@ -218,7 +218,7 @@ export default function Home() {
             </div>
 
             {/* Blogs */}
-            <div className="h-full w-full bg-Bg1 flex flex-col justofy-center items-center px-16">
+            <div className="h-full w-full bg-Bg1 flex flex-col justofy-center items-center px-16 mb-16">
                 <div className="flex flex-col gap-7 py-24">
                     <div className="flex flex-col items-center justify-center gap-3  ">
                         <img src="/asset/mouse.svg" alt="mouse" className="w-7" />
@@ -229,9 +229,36 @@ export default function Home() {
                         <div className="p-3 border-b-2 border-Brand1">
                             <h1 className="text-Brand1 text-5xl font-primary tracking-wider">Blogs</h1>
                         </div>
-                        <h1 className="text-sm font-mono ">I had the pleasure of working with these awesome projects</h1>
+                        <h1 className="text-sm font-mono ">some of the activities I've done are in these blogs</h1>
                     </div>
                 </div>
+
+                <div className="flex flex-col justify-center items-center px-16 -mt-10 gap-8">
+                    <div className="flex flex-row w-full border-t-2 border-b-2 gap-20 py-10 px-16 items-center justify-between" >
+                        <img src="/profil.jpg" alt="profile" className="w-44 h-44" />
+                        <div className="flex flex-col gap-5 w-full items-start justify-between">
+                            <h1 className="text-Brand1 font-primary text-2xl font-normal">Demisioner HMPS-SI UAD Periode 2024</h1>
+                            <p className="text-sm tracking-wide font-light font-primary ">Ini adalah info terkait dengan demisioner 2024 saya sudah melakukan banyak hal di organisasi mahasiswa ini dengan lebih baik</p>
+                            <button
+                            className="text-Brand1 border-b-2 border-White hover:border-Brand1"
+                            onClick={() => router.push('/Blog/Demisioner')}
+                            >Read More &gt;&gt;</button>
+                            <div className="flex flex-row gap-4 text-sm items-center tracking-wide">
+                                <label className=" py-1 px-7 rounded-2xl bg-Grey">Activity</label>
+                                <h1 className="font-light"><span className="font-bold mx-2">Text</span>Yudha</h1>
+                                <h1 className="font-light"><span className="font-bold mx-2">Date</span>2023-08-12</h1>
+                                <h1 className="font-light"><span className="font-bold mx-2">Read</span>1 Min</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button 
+                    className="text-black hover:text-White p-3 rounded-3xl px-6 bg-Brand1"
+                    onClick={() => router.push('/Blog')}
+                    >
+                        View More</button>
+                </div>
+
             </div>
 
             {/* Contact */}
@@ -246,7 +273,42 @@ export default function Home() {
                         <div className="p-3 border-b-2 border-Brand1">
                             <h1 className="text-Brand1 text-5xl font-primary tracking-wider">Contact</h1>
                         </div>
-                        <h1 className="text-sm font-mono ">I had the pleasure of working with these awesome projects</h1>
+                        <h1 className="text-sm font-mono ">I’m currently available for freelance work</h1>
+                    </div>
+                </div>
+
+                <div className="flex flex-col gap-4 justify-center items-center w-full ">
+                    <h1 className="border-2 p-4 px-5 rounded-tl-3xl rounded-br-3xl text-2xl text-Brand1 border-Brand1 -tracking-tighter">Send Me A Message</h1>
+
+                    <div className="flex flex-col items-center justify-center gap-16 w-full p-20">
+                        <div className="flex flex-row gap-20 w-full justify-between ">
+                            <div className="flex flex-col items-start gap-2 w-full">
+                                <p className="text-sm text-Brand1">Name</p>
+                                <input 
+                                placeholder="Enter Your Name "
+                                className="border-b-2 bg-transparent placeholder:text-sm w-full"
+                                ></input>
+                            </div>
+                            <div className="flex flex-col items-start gap-2 w-full">
+                                <p className="text-sm text-Brand1">Email</p>
+                                <input 
+                                placeholder="Enter Your Email "
+                                className="border-b-2 bg-transparent placeholder:text-sm w-full"
+                                ></input>
+                            </div>
+                        </div>
+                            <div className="flex flex-col items-start gap-2 w-full">
+                                <p className="text-sm text-Brand1">Message</p>
+                                <input 
+                                placeholder="Enter Your Needs "
+                                className="border-b-2 bg-transparent placeholder:text-sm w-full"
+                                ></input>
+                            </div>
+
+                            <button className="flex flex-row gap-2 items-center justify-center bg-Brand1 text-black hover:text-White px-8 py-3 rounded-3xl">
+                                <p>Send a Message</p>
+                                <PaperPlaneTilt size={24} />
+                            </button>
                     </div>
                 </div>
             </div>
