@@ -175,7 +175,7 @@ export default function Home() {
                             <h1 className="text-sm text-Brand1 font-mono ">&lt;/p&gt;</h1>
                         </div>
                     </div>
-                    <img src="/test.jpeg" alt="profil" className="rounded-3xl" />
+                    <img src="/profil3.png" alt="profil" className="rounded-3xl w-72 " />
                 </div>
             </div>
 

@@ -1,9 +1,20 @@
 // components/CategoryDisplay.js
-import { Monitor, Cube, GameController, PenNib } from 'phosphor-react';
-import { useState } from 'react';
+import { Monitor, Cube,  PenNib, WindowsLogo, GoogleLogo, Code, ExcludeSquare, AlignBottom } from 'phosphor-react';
+import { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+
 
 const CategoryDisplay = () => {
-  const [category, setCategory] = useState('webdev'); // State untuk menyimpan kategori aktif
+  const [category, setCategory] = useState('webdev');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const categories = ['webdev', 'design3d', 'game', 'uiux', 'google', 'adobe'];
 
   const logos = {
     webdev: [
@@ -11,6 +22,7 @@ const CategoryDisplay = () => {
       { src: '/skill/css.svg', alt: 'CSS' },
       { src: '/skill/javascript.svg', alt: 'JavaScript' },
       { src: '/skill/nextjs.svg', alt: 'Next.js' },
+      { src: '/skill/Github.svg', alt: 'Github' },
     ],
     uiux: [
       { src: '/skill/figma.svg', alt: 'Figma' },
@@ -21,45 +33,94 @@ const CategoryDisplay = () => {
       { src: '/skill/powerpoint.svg', alt: 'PowerPoint' },
     ],
     design3d: [
-      { src: '/skill/googledocs.svg', alt: 'Google Docs' },
-      { src: '/skill/googlesheet.svg', alt: 'Google Sheets' },
-      { src: '/skill/googleform.svg', alt: 'Google Forms' },
-      { src: '/skill/googleslides.svg', alt: 'Google Slides' },
-      { src: '/skill/googlesites.svg', alt: 'Google Sites' },
+      { src: '/skill/blender-3d.svg', alt: 'Blender' },
     ],
+    adobe: [
+      { src: '/skill/adobe-illustrator.svg', alt: 'Adobe Illustrator' },
+      { src: '/skill/adobe-premiere-pro.svg', alt: 'Adobe Premiere Pro' },
+    ],
+    google: [
+      { src: '/skill/googledocs.svg', alt: 'Google Docs' },
+      { src: '/skill/googledrive.svg', alt: 'Google Drive' },
+      { src: '/skill/googlesheet.svg', alt: 'Google Sheets' },
+      { src: '/skill/googleslides.svg', alt: 'Google Slides' },
+      { src: '/skill/googleform.svg', alt: 'Google Forms' },
+      { src: '/skill/googlefont.svg', alt: 'Google Fonts' },
+    ]
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      const nextIndex = (currentIndex + 1) % categories.length;
+      setCurrentIndex(nextIndex);
+      setCategory(categories[nextIndex]);
+      setTimeout(() => setIsAnimating(false), 500);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
+  const handleCategoryClick = (cat, index) => {
+    setIsAnimating(true);
+    setCurrentIndex(index);
+    setCategory(cat);
+    setTimeout(() => setIsAnimating(false), 500);
+  };
+
+  const categoryIcons = {
+    webdev: <Code size={24} className="text-black" />,
+    design3d: <Cube size={24} className="text-black" />,
+    game: <WindowsLogo size={24} className="text-black" />,
+    uiux: <AlignBottom size={24} className="text-black" />,
+    adobe: <PenNib size={24} className="text-black" />,
+    google: <GoogleLogo size={24} className='text-black' />,
+  };
+
+  const categoryNames = {
+    webdev: 'Web Development',
+    design3d: '3D Design',
+    game: 'Microsoft Office',
+    uiux: 'UI/UX',
+    adobe: 'Adobe',
+    google: 'Google',
   };
 
   return (
     <div>
-      {/* Bagian tombol */}
-      <div className="flex flex-row gap-10 justify-center items-center mb-8">
-        <button onClick={() => setCategory('webdev')} className="p-4 w-[200px] h-[100px] flex flex-col items-center justify-center gap-3 rounded-xl border-l-8 border-blue-500 bg-Brand2">
-          <Monitor size={24} className="text-black" />
-          <h1 className="font-mono text-sm tracking-wider text-black">Web Development</h1>
-        </button>
-        <button onClick={() => setCategory('design3d')} className="p-4 w-[200px] h-[100px] flex flex-col items-center justify-center gap-3 rounded-xl border-l-8 border-blue-500 bg-Brand2">
-          <Cube size={24} className="text-black" />
-          <h1 className="font-mono text-sm tracking-wider text-black">3D Design</h1>
-        </button>
-        <button onClick={() => setCategory('game')} className="p-4 w-[200px] h-[100px] flex flex-col items-center justify-center gap-3 rounded-xl border-l-8 border-blue-500 bg-Brand2">
-          <GameController size={24} className="text-black" />
-          <h1 className="font-mono text-sm tracking-wider text-black">Game Development</h1>
-        </button>
-        <button onClick={() => setCategory('uiux')} className="p-4 w-[200px] h-[100px] flex flex-col items-center justify-center gap-3 rounded-xl border-l-8 border-blue-500 bg-Brand2">
-          <PenNib size={24} className="text-black" />
-          <h1 className="font-mono text-sm tracking-wider text-black">UI/UX</h1>
-        </button>
+      <div className="flex flex-row gap-10 justify-center w-full items-center mb-8 relative">
+        {categories.map((cat, index) => (
+          <div
+            key={cat}
+            onClick={() => handleCategoryClick(cat, index)}
+            className={`p-4 w-[200px] h-[100px] flex flex-col items-center justify-center gap-3 rounded-xl border-l-8 border-blue-500 bg-Brand2 transition-transform duration-300 ${category === cat ? 'scale-110' : 'scale-100'} cursor-pointer hover:bg-Brand2/80`}
+          >
+            {categoryIcons[cat]}
+            <h1 className="font-mono text-sm tracking-wider text-black">{categoryNames[cat]}</h1>
+          </div>
+        ))}
       </div>
 
-      {/* Bagian logo */}
       <div className="flex justify-center items-center gap-10 mt-16">
         {logos[category]?.map((item, index) => (
-          <div key={index} className="flex flex-col items-center justify-center gap-2">
-            <img src={item.src} alt={item.alt} className="w-20 h-20" />
+          <div 
+            key={index} 
+            className="flex flex-col items-center justify-center gap-2 transition-all duration-500 transform"
+            style={{
+              animation: isAnimating ? 'fadeInOut 0.5s ease-in-out' : 'none'
+            }}
+          >
+            <img src={item.src} alt={item.alt} className="w-20 h-20 hover:scale-110 transition-transform duration-300" />
             <p className="font-mono text-lg text-white text-center mt-2">{item.alt}</p>
           </div>
         ))}
       </div>
+
+      <style jsx>{`
+        @keyframes fadeInOut {
+          0% { opacity: 0; transform: translateX(20px); }
+          100% { opacity: 1; transform: translateX(0); }
+        }
+      `}</style>
     </div>
   );
 };
