@@ -28,16 +28,21 @@ export default function Home() {
         <div className="h-full w-full bg-Bg1">
 
             {/* header */}
-            <div className="h-full w-full flex flex-row justify-center items-center px-16">
-                <div className="h-full w-full flex flex-row justify-between items-center font-mono border-b-2 border-grey py-7">
-                    <div className="flex flex-row gap-2 text-2xl">
-                        <h1 className='text-Brand1 font-primary'>&lt;C/&gt;</h1>
+            <div className="h-full w-full flex flex-row justify-center items-center px-4 md:px-16">
+                <div className="h-full w-full flex flex-row justify-between items-center font-mono border-b-2 border-grey py-4 md:py-7">
+
+                    {/* Logo dan Nama */}
+                    <div className="flex flex-row md:gap-2 gap-1 text-sm md:text-xl">
+                        {/* Logo tampil di semua ukuran */}
+                        <h1 className="text-Brand1 font-primary">&lt;C/&gt;</h1>
                         <h1>Hendrian Yudha Pratama</h1>
                     </div>
-                    <div className="flex flex-row gap-4 text-xl">
+
+                    {/* Navigation (Home, Blog) */}
+                    <div className="flex flex-row gap-2 md:gap-4 text-sm md:text-lg">
                         <button
-                            className={`relative text-lg font-mono ${currentPath === '/Home' ? 'text-Brand1' : 'text-white'} 
-         ${isTransitioning ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+                            className={`relative font-mono ${currentPath === '/Home' ? 'text-Brand1' : 'text-white'} 
+          ${isTransitioning ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
                             onClick={() => router.push('/Home')}
                         >
                             <h1>Home</h1>
@@ -45,10 +50,9 @@ export default function Home() {
           ${currentPath === '/Home' ? 'scale-x-100' : 'scale-x-0'}`}></div>
                         </button>
 
-                        {/* Tombol Blog */}
                         <button
-                            className={`relative text-lg font-mono ${currentPath === '/Blog' ? 'text-Brand1' : 'text-white'} 
-         ${isTransitioning ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
+                            className={`relative font-mono ${currentPath === '/Blog' ? 'text-Brand1' : 'text-white'} 
+          ${isTransitioning ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
                             onClick={() => router.push('/Blog')}
                         >
                             <h1>Blogs</h1>
@@ -56,27 +60,44 @@ export default function Home() {
           ${currentPath === '/Blog' ? 'scale-x-100' : 'scale-x-0'}`}></div>
                         </button>
                     </div>
-                    <div className='flex flex-row gap-4 text-xl'>
-                        <button className='flex flex-row gap-2 items-center justify-center hover:text-Brand1' onClick={() => router.push('https://www.instagram.com/hendrian_yudhaa__/?hl=en')} > 
-                            <FontAwesomeIcon icon={faInstagram} className='text-Brand1 text-xl w-6' />
-                            <h1>Instagram</h1>
+
+                    {/* Sosial Media */}
+                    <div className="flex flex-row gap-4 text-lg md:text-xl">
+                        {/* Hidden di mobile */}
+                        <button
+                            className="hidden md:flex flex-row gap-2 items-center justify-center hover:text-Brand1"
+                            onClick={() => router.push('https://www.instagram.com/hendrian_yudhaa__/?hl=en')}
+                        >
+                            {/* Logo only di tablet */}
+                            <FontAwesomeIcon icon={faInstagram} className="text-Brand1 text-xl w-6" />
+                            {/* Teks disembunyikan di tablet */}
+                            <h1 className="hidden lg:block">Instagram</h1>
                         </button>
-                        <button className='flex flex-row gap-2 items-center justify-center hover:text-Brand1' onClick={() => router.push('https://github.com/yudha556')}>
-                            <FontAwesomeIcon icon={faGithub} className='text-Brand1 text-xl w-6' />
-                            <h1>Github</h1>
+
+                        <button
+                            className="hidden md:flex flex-row gap-2 items-center justify-center hover:text-Brand1"
+                            onClick={() => router.push('https://github.com/yudha556')}
+                        >
+                            <FontAwesomeIcon icon={faGithub} className="text-Brand1 text-xl w-6" />
+                            <h1 className="hidden lg:block">Github</h1>
                         </button>
-                        <button className='flex flex-row gap-2 items-center justify-center hover:text-Brand1' onClick={() => router.push('https://www.linkedin.com/in/hendrian-yudha-pratama-021b2530b/')}>
-                            <FontAwesomeIcon icon={faLinkedin} className='text-Brand1 text-xl w-6' />
-                            <h1>Linkedin</h1>
+
+                        <button
+                            className="hidden md:flex flex-row gap-2 items-center justify-center hover:text-Brand1"
+                            onClick={() => router.push('https://www.linkedin.com/in/hendrian-yudha-pratama-021b2530b/')}
+                        >
+                            <FontAwesomeIcon icon={faLinkedin} className="text-Brand1 text-xl w-6" />
+                            <h1 className="hidden lg:block">Linkedin</h1>
                         </button>
                     </div>
                 </div>
             </div>
 
+
             {/* Intro */}
-            <div className='h-full w-full mb-24 bg-Bg1 flex flex-col justify-center items-center px-16'>
-                <h1 className='text-7xl text-Brand2 text-primary py-14'>Portofolio</h1>
-                <div className='h-full w-full flex flex-row gap-16 justify-between items-center'>
+            <div className='h-full w-full mb-24 bg-Bg1 flex flex-col justify-center items-center lg:px-16 py-16 lg:py-0 px-5'>
+                <h1 className='text-7xl text-Brand2 text-primary py-14 hidden lg:flex'>Portofolio</h1>
+                <div className='h-full w-full flex lg:flex-row flex-col gap-16 justify-between items-center'>
 
                     {/* left */}
                     <div className='border-4 p-8 rounded-tl-[40%] rounded-br-[40%] shadow-[-8px_-7px_0px_0px_#98FAEC] '>
@@ -102,7 +123,7 @@ export default function Home() {
                                 </div>
                                 <div className="flex flex-row gap-2 items-center justify-center">
                                     <LinkSimple size={24} className="text-Brand1 " />
-                                    <h1>www.anunaunaunau.com</h1>
+                                    <h1>https://portofolio-virid.vercel.app/Home</h1>
                                 </div>
                             </div>
 
@@ -116,39 +137,43 @@ export default function Home() {
                     </div>
 
                     {/* right */}
-                    <div className=' flex flex-row gap-10 h-full w-full items-center'>
+                    <div className=' flex md:flex-row flex-col gap-10 h-full w-full items-center'>
                         <div className="flex flex-col gap-9 h-full w-full">
                             <div className="flex flex-col gap-4 justify-between">
                                 <h1 className="text-Brand1 font-mono text-sm">&lt;h1&gt;</h1>
-                                <div className="flex flex-col ml-[20px] text-5xl tracking-wide font-primary gap-2">
+                                <div className="flex flex-col ml-[20px] md:text-4xl items-start text-2xl tracking-wide font-primary md:gap-2">
                                     <h1>Hey</h1>
                                     <h1>I'm <span className="text-Brand1">Yudha</span>,</h1>
-                                    <h1>Full-Stack Developer <span className="text-sm text-Brand1 font-mono">&lt;/h1&gt;</span></h1>
+                                    <div className="flex flex-col md:flex-row gap-2 md:items-center">
+                                        <h1>Full-Stack Developer </h1>
+                                        <h1 className="text-sm text-Brand1 font-mono -translate-x-5 md:translate-x-0">&lt;/h1&gt;</h1> 
+                                    </div>
+                                    
                                 </div>
                             </div>
 
                             <div className="flex flex-col justify-between gap-3">
                                 <h1 className="text-Brand1 text-sm font-mono">&lt;p&gt;</h1>
-                                <h1 className="ml-[20px] font-mono text-lg">I help business grow by crafting amazing web experiences. If you're Looking for a developer that likes to get stuff done,</h1>
+                                <h1 className="ml-[20px] font-mono md:text-lg text-sm">I help business grow by crafting amazing web experiences. If you're Looking for a developer that likes to get stuff done,</h1>
                                 <h1 className=" font-mono text-sm text-Brand1">&lt;/p&gt;</h1>
                             </div>
 
                             <div className="flex flex-row gap-4 items-center">
-                                <h1 className="text-3xl text-Brand1 font-mono tracking-wide">Let's Talk</h1>
+                                <h1 className="md:text-3xl text-2xl text-Brand1 font-mono tracking-wide">Let's Talk</h1>
                                 <button className="flex justify-center items-center rounded-full px-3 py-3 bg-Grey">
                                     <FontAwesomeIcon icon={faEnvelope} className='text-Brand1 text-2xl w-6' />
                                 </button>
                             </div>
                         </div>
 
-                        <div className="bg-Bg2 p-8  flex flex-col rounded-[35%] gap-14 items-center justify-center">
+                        <div className="bg-Bg2 p-8  flex flex-col rounded-[35%] gap-14  items-center justify-center">
                             <div className="flex flex-row gap-3 font-mono items-center">
                                 <h1 className="text-6xl text-Brand1">2</h1>
                                 <h1 className="text-lg">Programing language</h1>
                             </div>
                             <div className="flex flex-row gap-3  font-mono items-center">
-                                <h1 className="text-6xl text-Brand1">2</h1>
-                                <h1 className="text-lg">Years Experience</h1>
+                                <h1 className="text-6xl  text-Brand1">6</h1>
+                                <h1 className="text-lg ">Month Experience</h1>
                             </div>
                         </div>
 
@@ -158,21 +183,21 @@ export default function Home() {
 
             {/* About */}
             <div className="h-full w-full bg-Bg2 flex flex-col  justify-center items-center px-16 ">
-            <div className="flex flex-col gap-7 py-24">
+                <div className="flex flex-col gap-7 py-24">
                     <div className="flex flex-col items-center justify-center gap-3  ">
-                        <img src="/asset/mouse.svg" alt="mouse" className="w-7" />
-                        <img src="/asset/Line.svg" alt="line" className="w-3" />
+                        <img src="/asset/mouse.svg" alt="mouse" className="md:w-7 w-5" />
+                        <img src="/asset/Line.svg" alt="line" className="md:w-3 w-2" />
                     </div>
 
-                    <div className="flex flex-col gap-2 justify-center items-center">
+                    <div className="flex flex-col gap-2 justify-center items-center text-center">
                         <div className="p-3 border-b-2 border-Brand1">
-                            <h1 className="text-Brand1 text-5xl font-primary tracking-wider">Skills</h1>
+                            <h1 className="text-Brand1 md:text-5xl text-3xl font-primary tracking-wider">Sertificate</h1>
                         </div>
-                        <h1 className="text-sm font-mono ">I am striving to never stop learning and improving</h1>
+                        <h1 className="md:text-sm text-xs font-mono ">I am striving to never stop learning and improving</h1>
                     </div>
                 </div>
 
-                <div className="container  px-32 -mt-10">
+                <div className="container  md:px-32 -mt-10">
                     <Sertifikat />
                 </div>
             </div>
@@ -211,7 +236,7 @@ export default function Home() {
                         <h1 className="text-sm font-mono ">I had the pleasure of working with these awesome projects</h1>
                     </div>
                 </div>
-                
+
                 <div className="container  px-32 -mt-10">
                     <Projek />
                 </div>

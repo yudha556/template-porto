@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules"; // Update import path
+import "@/app/globals.css";
 
 const certificates = [
   {
@@ -30,17 +31,20 @@ const certificates = [
 const CertificateSlider = () => {
   return (
     <Swiper
-    spaceBetween={30}
-    pagination={{
-      clickable: true,
-    }}
-    navigation={true}
-    autoplay={{
-      delay: 3000, // Autoplay setiap 3 detik (3000ms)
-      disableOnInteraction: false, // Tetap autoplay meskipun user menginteraksi
-    }}
-    modules={[Pagination, Navigation, Autoplay]} // Tambahkan Autoplay ke modules
-    className="mySwiper"
+      spaceBetween={30}
+      pagination={{ clickable: true }}
+      navigation={true}
+      autoplay={{
+        delay: 3000, // Autoplay setiap 3 detik
+        disableOnInteraction: false,
+      }}
+      breakpoints={{
+        640: { slidesPerView: 1 },   // Mobile: 1 slide
+        768: { slidesPerView: 2 },   // Tablet: 2 slide
+        1024: { slidesPerView: 3 },  // Desktop: 3 slide
+      }}
+      modules={[Pagination, Navigation, Autoplay]}
+      className="mySwiper"
     >
       {certificates.map((certificate, index) => (
         <SwiperSlide key={index}>

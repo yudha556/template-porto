@@ -31,3 +31,21 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px transparent inset !important;
   color: inherit !important;
 }
+
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+  color: #fff; /* Biar tombolnya lebih kontras */
+  top: 50%; /* Posisikan di tengah vertikal */
+  transform: translateY(-50%); /* Biar bener-bener di tengah */
+  width: 30px; /* Lebar tombol */
+  height: 30px; /* Tinggi tombol */
+  margin: 0 10px; /* Biar nggak nempel ke gambar */
+}
+
+.mySwiper .swiper-button-prev {
+  left: -40px; /* Kasih jarak dari kiri */
+}
+
+.mySwiper .swiper-button-next {
+  right: -40px; /* Kasih jarak dari kanan */
+}
