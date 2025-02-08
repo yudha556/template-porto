@@ -57,15 +57,15 @@ export default function Home() {
                         </button>
                     </div>
                     <div className='flex flex-row gap-4 text-xl'>
-                        <button className='flex flex-row gap-2 items-center justify-center'>
+                        <button className='flex flex-row gap-2 items-center justify-center hover:text-Brand1' onClick={() => router.push('https://www.instagram.com/hendrian_yudhaa__/?hl=en')} > 
                             <FontAwesomeIcon icon={faInstagram} className='text-Brand1 text-xl w-6' />
                             <h1>Instagram</h1>
                         </button>
-                        <button className='flex flex-row gap-2 items-center justify-center'>
+                        <button className='flex flex-row gap-2 items-center justify-center hover:text-Brand1' onClick={() => router.push('https://github.com/yudha556')}>
                             <FontAwesomeIcon icon={faGithub} className='text-Brand1 text-xl w-6' />
                             <h1>Github</h1>
                         </button>
-                        <button className='flex flex-row gap-2 items-center justify-center'>
+                        <button className='flex flex-row gap-2 items-center justify-center hover:text-Brand1' onClick={() => router.push('https://www.linkedin.com/in/hendrian-yudha-pratama-021b2530b/')}>
                             <FontAwesomeIcon icon={faLinkedin} className='text-Brand1 text-xl w-6' />
                             <h1>Linkedin</h1>
                         </button>
