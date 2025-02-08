@@ -141,7 +141,7 @@ export default function Home() {
                         <div className="flex flex-col gap-9 h-full w-full">
                             <div className="flex flex-col gap-4 justify-between">
                                 <h1 className="text-Brand1 font-mono text-sm">&lt;h1&gt;</h1>
-                                <div className="flex flex-col ml-[20px] md:text-4xl items-start text-2xl tracking-wide font-primary md:gap-2">
+                                <div className="flex flex-col ml-[20px] md:text-5xl items-start text-2xl tracking-wide font-primary md:gap-2">
                                     <h1>Hey</h1>
                                     <h1>I'm <span className="text-Brand1">Yudha</span>,</h1>
                                     <div className="flex flex-col md:flex-row gap-2 md:items-center">
