@@ -25,3 +25,9 @@ body {
 code, pre {
   font-family: 'IBM Plex Mono', monospace; /* Font monospace untuk kode */
 }
+
+input:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+  color: inherit !important;
+}

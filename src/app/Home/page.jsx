@@ -1,12 +1,15 @@
 'use client';
 
 import { useEffect, useState } from "react";
+import '../globals.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-import { MapPin, Student, LinkSimple, DownloadSimple, PaperPlaneTilt   } from "phosphor-react";
+import { MapPin, Student, LinkSimple, DownloadSimple, PaperPlaneTilt } from "phosphor-react";
 import LogoDisplay from '@/components/logoDisplay';
 import { useRouter, usePathname } from "next/navigation";
+import Sertifikat from '@/components/sertifikat';
+import Projek from '@/components/projek';
 
 
 export default function Home() {
@@ -17,9 +20,9 @@ export default function Home() {
     const handlePageChange = (page) => {
         setIsTransitioning(true);
         setTimeout(() => {
-          router.push(page);
-        }, 300); 
-      };
+            router.push(page);
+        }, 300);
+    };
 
     return (
         <div className="h-full w-full bg-Bg1">
@@ -140,7 +143,7 @@ export default function Home() {
 
                         <div className="bg-Bg2 p-8  flex flex-col rounded-[35%] gap-14 items-center justify-center">
                             <div className="flex flex-row gap-3 font-mono items-center">
-                                <h1 className="text-6xl text-Brand1">4</h1>
+                                <h1 className="text-6xl text-Brand1">2</h1>
                                 <h1 className="text-lg">Programing language</h1>
                             </div>
                             <div className="flex flex-row gap-3  font-mono items-center">
@@ -154,33 +157,28 @@ export default function Home() {
             </div>
 
             {/* About */}
-            <div className="h-full w-full bg-Bg2 flex flex-col justify-center items-center px-16 ">
-                <div className="flex flex-col items-center justify-center gap-3 py-24 ">
-                    <img src="/asset/mouse.svg" alt="mouse" className="w-7" />
-                    <img src="/asset/Line.svg" alt="line" className="w-3" />
+            <div className="h-full w-full bg-Bg2 flex flex-col  justify-center items-center px-16 ">
+            <div className="flex flex-col gap-7 py-24">
+                    <div className="flex flex-col items-center justify-center gap-3  ">
+                        <img src="/asset/mouse.svg" alt="mouse" className="w-7" />
+                        <img src="/asset/Line.svg" alt="line" className="w-3" />
+                    </div>
+
+                    <div className="flex flex-col gap-2 justify-center items-center">
+                        <div className="p-3 border-b-2 border-Brand1">
+                            <h1 className="text-Brand1 text-5xl font-primary tracking-wider">Skills</h1>
+                        </div>
+                        <h1 className="text-sm font-mono ">I am striving to never stop learning and improving</h1>
+                    </div>
                 </div>
 
-                <div className="w-full flex flex-row gap-24 p-14 items-center justify-between">
-                    <div className="flex flex-col gap-9">
-                        <div className="flex w-60 items-center justify-center p-4 bg-Bg1 border-4  border-Brand1 rounded-tl-[30%] rounded-br-[30%]">
-                            <h1 className="text-4xl tracking-wide ">About Me</h1>
-                        </div>
-
-                        <div className="h-full w-full flex flex-col gap-4 p-6 bg-Bg1 rounded-3xl">
-                            <h1 className="text-sm text-Brand1 font-mono ">&lt;p&gt;</h1>
-                            <p className="text-sm font-mono ml-[20px]"><span className="text-Brand1 text-xl">Hello!</span>My name is Sinan and I specialize in web developement that utilizes HTML, CSS, JS, and REACT etc.
-                                I am a highly motivated individual and eternal optimist dedicated to writing clear, concise, robust code that works. Striving to never stop learning and improving.
-                                When I'm not coding, I am writing bolgs, reading, or picking up some new hands-on art project like photography.
-                                I like to have my perspective and belief systems challenged so that I see the world through new eyes.</p>
-                            <h1 className="text-sm text-Brand1 font-mono ">&lt;/p&gt;</h1>
-                        </div>
-                    </div>
-                    <img src="/profil3.png" alt="profil" className="rounded-3xl w-72 " />
+                <div className="container  px-32 -mt-10">
+                    <Sertifikat />
                 </div>
             </div>
 
             {/* Skills */}
-            <div className="h-full w-full bg-Bg1 flex flex-col justofy-center items-center px-16 mb-16">
+            <div className="h-full w-full bg-Bg1 flex flex-col justify-center items-center px-16 mb-16">
                 <div className="flex flex-col gap-7 py-24">
                     <div className="flex flex-col items-center justify-center gap-3  ">
                         <img src="/asset/mouse.svg" alt="mouse" className="w-7" />
@@ -213,7 +211,10 @@ export default function Home() {
                         <h1 className="text-sm font-mono ">I had the pleasure of working with these awesome projects</h1>
                     </div>
                 </div>
-
+                
+                <div className="container  px-32 -mt-10">
+                    <Projek />
+                </div>
 
             </div>
 
@@ -235,13 +236,13 @@ export default function Home() {
 
                 <div className="flex flex-col justify-center items-center px-16 -mt-10 gap-8">
                     <div className="flex flex-row w-full border-t-2 border-b-2 gap-20 py-10 px-16 items-center justify-between" >
-                        <img src="/profil.jpg" alt="profile" className="w-44 h-44" />
+                        <img src="/Blog/Demis.JPG" alt="profile" className="max-w-full h-auto object-contain max-h-52" />
                         <div className="flex flex-col gap-5 w-full items-start justify-between">
                             <h1 className="text-Brand1 font-primary text-2xl font-normal">Demisioner HMPS-SI UAD Periode 2024</h1>
                             <p className="text-sm tracking-wide font-light font-primary ">Ini adalah info terkait dengan demisioner 2024 saya sudah melakukan banyak hal di organisasi mahasiswa ini dengan lebih baik</p>
                             <button
-                            className="text-Brand1 border-b-2 border-White hover:border-Brand1"
-                            onClick={() => router.push('/Blog/Demisioner')}
+                                className="text-Brand1 border-b-2 border-White hover:border-Brand1"
+                                onClick={() => router.push('/Blog/Demisioner')}
                             >Read More &gt;&gt;</button>
                             <div className="flex flex-row gap-4 text-sm items-center tracking-wide">
                                 <label className=" py-1 px-7 rounded-2xl bg-Grey">Activity</label>
@@ -252,9 +253,9 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <button 
-                    className="text-black hover:text-White p-3 rounded-3xl px-6 bg-Brand1"
-                    onClick={() => router.push('/Blog')}
+                    <button
+                        className="text-black hover:text-White p-3 rounded-3xl px-6 bg-Brand1"
+                        onClick={() => router.push('/Blog')}
                     >
                         View More</button>
                 </div>
@@ -273,46 +274,56 @@ export default function Home() {
                         <div className="p-3 border-b-2 border-Brand1">
                             <h1 className="text-Brand1 text-5xl font-primary tracking-wider">Contact</h1>
                         </div>
-                        <h1 className="text-sm font-mono ">I’m currently available for freelance work</h1>
+                        <h1 className="text-sm font-mono ">I'm currently available for freelance work</h1>
                     </div>
                 </div>
 
                 <div className="flex flex-col gap-4 justify-center items-center w-full ">
                     <h1 className="border-2 p-4 px-5 rounded-tl-3xl rounded-br-3xl text-2xl text-Brand1 border-Brand1 -tracking-tighter">Send Me A Message</h1>
 
-                    <div className="flex flex-col items-center justify-center gap-16 w-full p-20">
+                    <form onSubmit={(e) => {
+                        e.preventDefault()
+                        const formData = new FormData(e.target)
+                        window.location.href = `mailto:yudhapratama11005@gmail.com?subject=Message from ${formData.get('name')}&body=From: ${formData.get('name')}%0D%0AEmail: ${formData.get('email')}%0D%0A%0D%0AMessage:%0D%0A${formData.get('message')}`
+                    }} className="flex flex-col items-center justify-center gap-16 w-full p-20">
                         <div className="flex flex-row gap-20 w-full justify-between ">
                             <div className="flex flex-col items-start gap-2 w-full">
                                 <p className="text-sm text-Brand1">Name</p>
-                                <input 
-                                placeholder="Enter Your Name "
-                                className="border-b-2 bg-transparent placeholder:text-sm w-full"
-                                ></input>
+                                <input
+                                    name="name"
+                                    required
+                                    placeholder="Enter Your Name "
+                                    className="border-b-2 bg-transparent placeholder:text-sm w-full outline-none"
+                                />
                             </div>
                             <div className="flex flex-col items-start gap-2 w-full">
                                 <p className="text-sm text-Brand1">Email</p>
-                                <input 
-                                placeholder="Enter Your Email "
-                                className="border-b-2 bg-transparent placeholder:text-sm w-full"
-                                ></input>
+                                <input
+                                    name="email"
+                                    type="email"
+                                    required
+                                    placeholder="Enter Your Email "
+                                    className="border-b-2 bg-transparent placeholder:text-sm w-full outline-none appearance-none"
+                                />
                             </div>
                         </div>
-                            <div className="flex flex-col items-start gap-2 w-full">
-                                <p className="text-sm text-Brand1">Message</p>
-                                <input 
+                        <div className="flex flex-col items-start gap-2 w-full">
+                            <p className="text-sm text-Brand1">Message</p>
+                            <input
+                                name="message"
+                                required
                                 placeholder="Enter Your Needs "
-                                className="border-b-2 bg-transparent placeholder:text-sm w-full"
-                                ></input>
-                            </div>
+                                className="border-b-2 bg-transparent placeholder:text-sm w-full outline-none "
+                            />
+                        </div>
 
-                            <button className="flex flex-row gap-2 items-center justify-center bg-Brand1 text-black hover:text-White px-8 py-3 rounded-3xl">
-                                <p>Send a Message</p>
-                                <PaperPlaneTilt size={24} />
-                            </button>
-                    </div>
+                        <button type="submit" className="flex flex-row gap-2 items-center justify-center bg-Brand1 text-black hover:text-White px-8 py-3 rounded-3xl">
+                            <p>Send a Message</p>
+                            <PaperPlaneTilt size={24} />
+                        </button>
+                    </form>
                 </div>
             </div>
-
 
         </div>
     )

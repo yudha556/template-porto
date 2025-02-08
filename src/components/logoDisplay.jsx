@@ -23,6 +23,7 @@ const CategoryDisplay = () => {
       { src: '/skill/javascript.svg', alt: 'JavaScript' },
       { src: '/skill/nextjs.svg', alt: 'Next.js' },
       { src: '/skill/Github.svg', alt: 'Github' },
+      { src: '/skill/python.svg', alt: 'Python' },
     ],
     uiux: [
       { src: '/skill/figma.svg', alt: 'Figma' },
@@ -41,10 +42,10 @@ const CategoryDisplay = () => {
     ],
     google: [
       { src: '/skill/googledocs.svg', alt: 'Google Docs' },
-      { src: '/skill/googledrive.svg', alt: 'Google Drive' },
       { src: '/skill/googlesheet.svg', alt: 'Google Sheets' },
       { src: '/skill/googleslides.svg', alt: 'Google Slides' },
       { src: '/skill/googleform.svg', alt: 'Google Forms' },
+      { src: '/skill/googlesites.svg', alt: 'Google Sites' },
       { src: '/skill/googlefont.svg', alt: 'Google Fonts' },
     ]
   };
@@ -86,8 +87,8 @@ const CategoryDisplay = () => {
   };
 
   return (
-    <div>
-      <div className="flex flex-row gap-10 justify-center w-full items-center mb-8 relative">
+    <div className="flex flex-col items-center justify-center ">
+      <div className="flex flex-row gap-10 justify-center w-full  items-center  mb-8 relative">
         {categories.map((cat, index) => (
           <div
             key={cat}
