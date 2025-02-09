@@ -127,11 +127,11 @@ export default function Home() {
                                 </div>
                             </div>
 
-                            <button
-                                className='bg-White rounded-3xl py-4 px-0 mx-8  flex flex-row gap-2 text-black items-center justify-center '
-                            >
-                                Download CV
-                                <DownloadSimple size={24} />
+                            <button className='bg-White rounded-3xl py-4 px-0 mx-8  flex flex-row gap-2 text-black items-center justify-center -ml-0'>
+                                <a href="/CV/Hendrian_Yudha_Pratama_CV.pdf" download="Hendrian_Yudha_Pratama_CV.pdf" className="flex flex-row gap-2 items-center justify-center">
+                                    Download CV
+                                    <DownloadSimple size={24} />
+                                </a>
                             </button>
                         </div>
                     </div>
