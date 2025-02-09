@@ -123,12 +123,12 @@ export default function Home() {
                                 </div>
                                 <div className="flex flex-row gap-2 items-center justify-center">
                                     <LinkSimple size={24} className="text-Brand1 " />
-                                    <h1>https://portofolio-virid.vercel.app/Home</h1>
+                                    <h1>https://hendrian-yudha.vercel.app/</h1>
                                 </div>
                             </div>
 
                             <button className='bg-White rounded-3xl py-4 px-0 mx-8  flex flex-row gap-2 text-black items-center justify-center -ml-0'>
-                                <a href="/CV/Hendrian_Yudha_Pratama_CV.pdf" download="Hendrian_Yudha_Pratama_CV.pdf" className="flex flex-row gap-2 items-center justify-center">
+                                <a href="/CV/hendrian_yudha_CV.pdf" download="hendrian_yudha_CV.pdf" className="flex flex-row gap-2 items-center justify-center">
                                     Download CV
                                     <DownloadSimple size={24} />
                                 </a>
