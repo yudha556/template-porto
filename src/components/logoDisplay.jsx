@@ -1,13 +1,11 @@
 // components/CategoryDisplay.js
-import { Monitor, Cube,  PenNib, WindowsLogo, GoogleLogo, Code, ExcludeSquare, AlignBottom } from 'phosphor-react';
+import { Monitor, Cube, PenNib, WindowsLogo, GoogleLogo, Code, ExcludeSquare, AlignBottom } from 'phosphor-react';
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-
 import { EffectCoverflow, Pagination } from 'swiper/modules';
-
 
 const CategoryDisplay = () => {
   const [category, setCategory] = useState('webdev');
@@ -74,7 +72,7 @@ const CategoryDisplay = () => {
     game: <WindowsLogo size={24} className="text-black" />,
     uiux: <AlignBottom size={24} className="text-black" />,
     adobe: <PenNib size={24} className="text-black" />,
-    google: <GoogleLogo size={24} className='text-black' />,
+    google: <GoogleLogo size={24} className="text-black" />,
   };
 
   const categoryNames = {
@@ -87,21 +85,25 @@ const CategoryDisplay = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center ">
-      <div className="flex flex-row gap-10 justify-center w-full  items-center  mb-8 relative">
+    <div className="flex flex-col items-center justify-center w-full ">
+      {/* Container Kategori - Responsive Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-7 w-full mb-8">
         {categories.map((cat, index) => (
           <div
             key={cat}
             onClick={() => handleCategoryClick(cat, index)}
-            className={`p-4 w-[200px] h-[100px] flex flex-col items-center justify-center gap-3 rounded-xl border-l-8 border-blue-500 bg-Brand2 transition-transform duration-300 ${category === cat ? 'scale-110' : 'scale-100'} cursor-pointer hover:bg-Brand2/80`}
+            className={`p-4 flex flex-col items-center justify-center gap-3 rounded-xl border-l-8 border-blue-500 bg-Brand2 transition-transform duration-300 ${category === cat ? 'scale-110' : 'scale-100'} cursor-pointer hover:bg-Brand2/80`}
           >
             {categoryIcons[cat]}
-            <h1 className="font-mono text-sm tracking-wider text-black">{categoryNames[cat]}</h1>
+            <h1 className="font-mono text-xs sm:text-sm lg:text-base tracking-wider text-black">
+              {categoryNames[cat]}
+            </h1>
           </div>
         ))}
       </div>
 
-      <div className="flex justify-center items-center gap-10 mt-16">
+      {/* Container Logo - Responsive Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:flex lg:flex-row justify-center gap-8 mt-8">
         {logos[category]?.map((item, index) => (
           <div 
             key={index} 
@@ -110,12 +112,17 @@ const CategoryDisplay = () => {
               animation: isAnimating ? 'fadeInOut 0.5s ease-in-out' : 'none'
             }}
           >
-            <img src={item.src} alt={item.alt} className="w-20 h-20 hover:scale-110 transition-transform duration-300" />
-            <p className="font-mono text-lg text-white text-center mt-2">{item.alt}</p>
+            <img 
+              src={item.src} 
+              alt={item.alt} 
+              className="w-16 sm:w-24 lg:w-24 h-16 sm:h-24 lg:h-24 mx-auto hover:scale-110 transition-transform duration-300" 
+            />
+            <p className="font-mono text-xs sm:text-sm lg:text-lg text-white text-center mt-2">
+              {item.alt}
+            </p>
           </div>
         ))}
       </div>
-
       <style jsx>{`
         @keyframes fadeInOut {
           0% { opacity: 0; transform: translateX(20px); }

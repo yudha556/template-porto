@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation, Autoplay } from "swiper/modules"; // Update import path
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const certificates = [
   {
@@ -29,34 +29,44 @@ const certificates = [
 
 const Project = () => {
   return (
-    <Swiper
-    spaceBetween={30}
-    pagination={{
-      clickable: true,
-    }}
-    navigation={true}
-    autoplay={{
-      delay: 3000, // Autoplay setiap 3 detik (3000ms)
-      disableOnInteraction: false, // Tetap autoplay meskipun user menginteraksi
-    }}
-    modules={[Pagination, Navigation, Autoplay]} // Tambahkan Autoplay ke modules
-    className="mySwiper"
-    >
-      {certificates.map((certificate, index) => (
-        <SwiperSlide key={index}>
-          <div className="rounded-lg shadow-lg p-4 flex flex-col justify-center items-center mb-10">
-            <img
-              src={certificate.image}
-              alt={certificate.title}
-              className="max-w-full h-auto object-contain max-h-96"
-            />
-            <h3 className="text-lg font-semibold mt-4">{certificate.title}</h3>
-            <p className="text-gray-600">{certificate.description}</p>
-            <span className="text-sm text-gray-500">{certificate.date}</span>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    // Container pembungkus dengan w-full & min-h supaya gak collapse di mobile
+    <div className="w-full mx-auto p-4 min-h-[300px]">
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={1} // Default di mobile
+        pagination={{ clickable: true }}
+        navigation={true}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        breakpoints={{
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        }}
+        modules={[Pagination, Navigation, Autoplay]}
+        className="mySwiper"
+      >
+        {certificates.map((certificate, index) => (
+          <SwiperSlide key={index}>
+            <div className="rounded-lg shadow-lg p-4 flex flex-col justify-center items-center mb-10">
+              <img
+                src={certificate.image}
+                alt={certificate.title}
+                className="max-w-full h-auto object-contain max-h-96"
+              />
+              <h3 className="text-lg font-semibold mt-4 text-center">
+                {certificate.title}
+              </h3>
+              <p className="text-gray-600 text-center">
+                {certificate.description}
+              </p>
+              <span className="text-sm text-gray-500 text-center">
+                {certificate.date}
+              </span>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 };
 

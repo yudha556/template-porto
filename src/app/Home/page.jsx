@@ -146,9 +146,9 @@ export default function Home() {
                                     <h1>I'm <span className="text-Brand1">Yudha</span>,</h1>
                                     <div className="flex flex-col md:flex-row gap-2 md:items-center">
                                         <h1>Full-Stack Developer </h1>
-                                        <h1 className="text-sm text-Brand1 font-mono -translate-x-5 md:translate-x-0">&lt;/h1&gt;</h1> 
+                                        <h1 className="text-sm text-Brand1 font-mono -translate-x-5 md:translate-x-0">&lt;/h1&gt;</h1>
                                     </div>
-                                    
+
                                 </div>
                             </div>
 
@@ -181,7 +181,7 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* About */}
+            {/* sertifikat */}
             <div className="h-full w-full bg-Bg2 flex flex-col  justify-center items-center px-16 ">
                 <div className="flex flex-col gap-7 py-24">
                     <div className="flex flex-col items-center justify-center gap-3  ">
@@ -203,18 +203,18 @@ export default function Home() {
             </div>
 
             {/* Skills */}
-            <div className="h-full w-full bg-Bg1 flex flex-col justify-center items-center px-16 mb-16">
+            <div className="h-full w-full bg-Bg1 flex flex-col justify-center items-center md:px-16 px-5 mb-16">
                 <div className="flex flex-col gap-7 py-24">
                     <div className="flex flex-col items-center justify-center gap-3  ">
-                        <img src="/asset/mouse.svg" alt="mouse" className="w-7" />
-                        <img src="/asset/Line.svg" alt="line" className="w-3" />
+                        <img src="/asset/mouse.svg" alt="mouse" className="md:w-7 w-5" />
+                        <img src="/asset/Line.svg" alt="line" className="md:w-3 w-2" />
                     </div>
 
-                    <div className="flex flex-col gap-2 justify-center items-center">
+                    <div className="flex flex-col gap-2 justify-center items-center text-center">
                         <div className="p-3 border-b-2 border-Brand1">
-                            <h1 className="text-Brand1 text-5xl font-primary tracking-wider">Skills</h1>
+                            <h1 className="text-Brand1 md:text-5xl text-3xl font-primary tracking-wider">Skill</h1>
                         </div>
-                        <h1 className="text-sm font-mono ">I am striving to never stop learning and improving</h1>
+                        <h1 className="md:text-sm text-xs font-mono ">I am striving to never stop learning and improving</h1>
                     </div>
                 </div>
 
@@ -225,131 +225,176 @@ export default function Home() {
             <div className="h-full w-full bg-Bg2 flex flex-col justofy-center items-center px-16">
                 <div className="flex flex-col gap-7 py-24">
                     <div className="flex flex-col items-center justify-center gap-3  ">
-                        <img src="/asset/mouse.svg" alt="mouse" className="w-7" />
-                        <img src="/asset/Line.svg" alt="line" className="w-3" />
+                        <img src="/asset/mouse.svg" alt="mouse" className="md:w-7 w-5" />
+                        <img src="/asset/Line.svg" alt="line" className="md:w-3 w-2" />
                     </div>
 
-                    <div className="flex flex-col gap-2 justify-center items-center">
+                    <div className="flex flex-col gap-2 justify-center items-center text-center">
                         <div className="p-3 border-b-2 border-Brand1">
-                            <h1 className="text-Brand1 text-5xl font-primary tracking-wider">Project</h1>
+                            <h1 className="text-Brand1 md:text-5xl text-3xl font-primary tracking-wider">Project</h1>
                         </div>
-                        <h1 className="text-sm font-mono ">I had the pleasure of working with these awesome projects</h1>
+                        <h1 className="md:text-sm text-xs font-mono ">I am striving to never stop learning and improving</h1>
                     </div>
                 </div>
 
-                <div className="container  px-32 -mt-10">
+
+                <div className="container  lg:px-32 -mt-10">
                     <Projek />
                 </div>
 
             </div>
 
             {/* Blogs */}
-            <div className="h-full w-full bg-Bg1 flex flex-col justofy-center items-center px-16 mb-16">
+            <div className="h-full w-full bg-Bg1 flex flex-col justify-center items-center px-4 md:px-16 mb-16">
+                {/* Header Section */}
                 <div className="flex flex-col gap-7 py-24">
                     <div className="flex flex-col items-center justify-center gap-3  ">
-                        <img src="/asset/mouse.svg" alt="mouse" className="w-7" />
-                        <img src="/asset/Line.svg" alt="line" className="w-3" />
+                        <img src="/asset/mouse.svg" alt="mouse" className="md:w-7 w-5" />
+                        <img src="/asset/Line.svg" alt="line" className="md:w-3 w-2" />
                     </div>
 
-                    <div className="flex flex-col gap-2 justify-center items-center">
+                    <div className="flex flex-col gap-2 justify-center items-center text-center">
                         <div className="p-3 border-b-2 border-Brand1">
-                            <h1 className="text-Brand1 text-5xl font-primary tracking-wider">Blogs</h1>
+                            <h1 className="text-Brand1 md:text-5xl text-3xl font-primary tracking-wider">Blogs</h1>
                         </div>
-                        <h1 className="text-sm font-mono ">some of the activities I've done are in these blogs</h1>
+                        <h1 className="md:text-sm text-xs font-mono ">I am striving to never stop learning and improving</h1>
                     </div>
                 </div>
 
-                <div className="flex flex-col justify-center items-center px-16 -mt-10 gap-8">
-                    <div className="flex flex-row w-full border-t-2 border-b-2 gap-20 py-10 px-16 items-center justify-between" >
-                        <img src="/Blog/Demis.JPG" alt="profile" className="max-w-full h-auto object-contain max-h-52" />
-                        <div className="flex flex-col gap-5 w-full items-start justify-between">
-                            <h1 className="text-Brand1 font-primary text-2xl font-normal">Demisioner HMPS-SI UAD Periode 2024</h1>
-                            <p className="text-sm tracking-wide font-light font-primary ">Ini adalah info terkait dengan demisioner 2024 saya sudah melakukan banyak hal di organisasi mahasiswa ini dengan lebih baik</p>
+
+                {/* Blog Card Section */}
+                <div className="flex flex-col justify-center items-center px-4 md:px-16 -mt-4 md:-mt-10 gap-8">
+                    <div className="flex flex-col lg:flex-row w-full border-t-2 border-b-2 gap-8 md:gap-20 py-10 px-4 md:px-16 items-center justify-between">
+                        {/* Image */}
+                        <img
+                            src="/Blog/Demis.JPG"
+                            alt="profile"
+                            className="w-full md:w-auto max-w-full h-auto object-contain max-h-52"
+                        />
+                        {/* Content */}
+                        <div className="flex flex-col gap-5 w-full items-start">
+                            <h1 className="text-Brand1 font-primary text-xl md:text-2xl font-normal">
+                                Demisioner HMPS-SI UAD Periode 2024
+                            </h1>
+                            <p className="text-sm tracking-wide font-light font-primary">
+                                Ini adalah info terkait dengan demisioner 2024 saya sudah melakukan banyak
+                                hal di organisasi mahasiswa ini dengan lebih baik
+                            </p>
                             <button
                                 className="text-Brand1 border-b-2 border-White hover:border-Brand1"
-                                onClick={() => router.push('/Blog/Demisioner')}
-                            >Read More &gt;&gt;</button>
-                            <div className="flex flex-row gap-4 text-sm items-center tracking-wide">
-                                <label className=" py-1 px-7 rounded-2xl bg-Grey">Activity</label>
-                                <h1 className="font-light"><span className="font-bold mx-2">Text</span>Yudha</h1>
-                                <h1 className="font-light"><span className="font-bold mx-2">Date</span>2023-08-12</h1>
-                                <h1 className="font-light"><span className="font-bold mx-2">Read</span>1 Min</h1>
+                                onClick={() => router.push("/Blog/Demisioner")}
+                            >
+                                Read More &gt;&gt;
+                            </button>
+                            <div className="flex flex-wrap gap-4 text-sm items-center tracking-wide">
+                                <label className="py-1 px-3 rounded-2xl bg-Grey">Activity</label>
+                                <h1 className="font-light">
+                                    <span className="font-bold mx-1">Text</span>Yudha
+                                </h1>
+                                <h1 className="font-light">
+                                    <span className="font-bold mx-1">Date</span>2023-08-12
+                                </h1>
+                                <h1 className="font-light">
+                                    <span className="font-bold mx-1">Read</span>1 Min
+                                </h1>
                             </div>
                         </div>
                     </div>
 
                     <button
                         className="text-black hover:text-White p-3 rounded-3xl px-6 bg-Brand1"
-                        onClick={() => router.push('/Blog')}
+                        onClick={() => router.push("/Blog")}
                     >
-                        View More</button>
+                        View More
+                    </button>
                 </div>
-
             </div>
 
+
             {/* Contact */}
-            <div className="h-full w-full bg-Bg2 flex flex-col justofy-center items-center px-16">
-                <div className="flex flex-col gap-7 py-24">
-                    <div className="flex flex-col items-center justify-center gap-3  ">
+            <div className="h-full w-full bg-Bg2 flex flex-col justify-center items-center px-4 md:px-16 mb-16">
+                {/* Header Section */}
+                <div className="flex flex-col gap-7 py-12 md:py-24">
+                    <div className="flex flex-col items-center justify-center gap-3">
                         <img src="/asset/mouse.svg" alt="mouse" className="w-7" />
                         <img src="/asset/Line.svg" alt="line" className="w-3" />
                     </div>
 
                     <div className="flex flex-col gap-2 justify-center items-center">
                         <div className="p-3 border-b-2 border-Brand1">
-                            <h1 className="text-Brand1 text-5xl font-primary tracking-wider">Contact</h1>
+                            <h1 className="text-Brand1 text-3xl md:text-5xl lg:text-6xl font-primary tracking-wider">
+                                Contact
+                            </h1>
                         </div>
-                        <h1 className="text-sm font-mono ">I'm currently available for freelance work</h1>
+                        <h1 className="text-sm md:text-base font-mono text-center">
+                            I'm currently available for freelance work
+                        </h1>
                     </div>
                 </div>
 
-                <div className="flex flex-col gap-4 justify-center items-center w-full ">
-                    <h1 className="border-2 p-4 px-5 rounded-tl-3xl rounded-br-3xl text-2xl text-Brand1 border-Brand1 -tracking-tighter">Send Me A Message</h1>
+                {/* Form Section */}
+                <div className="flex flex-col gap-4 justify-center items-center w-full">
+                    <h1 className="border-2 p-4 px-5 rounded-tl-3xl rounded-br-3xl text-xl md:text-2xl lg:text-3xl text-Brand1 border-Brand1 -tracking-tighter">
+                        Send Me A Message
+                    </h1>
 
-                    <form onSubmit={(e) => {
-                        e.preventDefault()
-                        const formData = new FormData(e.target)
-                        window.location.href = `mailto:yudhapratama11005@gmail.com?subject=Message from ${formData.get('name')}&body=From: ${formData.get('name')}%0D%0AEmail: ${formData.get('email')}%0D%0A%0D%0AMessage:%0D%0A${formData.get('message')}`
-                    }} className="flex flex-col items-center justify-center gap-16 w-full p-20">
-                        <div className="flex flex-row gap-20 w-full justify-between ">
+                    <form
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            const formData = new FormData(e.target);
+                            window.location.href = `mailto:yudhapratama11005@gmail.com?subject=Message from ${formData.get(
+                                "name"
+                            )}&body=From: ${formData.get(
+                                "name"
+                            )}%0D%0AEmail: ${formData.get("email")}%0D%0A%0D%0AMessage:%0D%0A${formData.get("message")}`;
+                        }}
+                        className="flex flex-col items-center justify-center gap-8 md:gap-16 w-full p-4 md:p-20"
+                    >
+                        {/* Name & Email */}
+                        <div className="flex flex-col md:flex-row gap-8 md:gap-20 w-full justify-between">
                             <div className="flex flex-col items-start gap-2 w-full">
-                                <p className="text-sm text-Brand1">Name</p>
+                                <p className="text-sm md:text-base text-Brand1">Name</p>
                                 <input
                                     name="name"
                                     required
-                                    placeholder="Enter Your Name "
-                                    className="border-b-2 bg-transparent placeholder:text-sm w-full outline-none"
+                                    placeholder="Enter Your Name"
+                                    className="border-b-2 bg-transparent placeholder:text-sm md:placeholder:text-base w-full outline-none"
                                 />
                             </div>
                             <div className="flex flex-col items-start gap-2 w-full">
-                                <p className="text-sm text-Brand1">Email</p>
+                                <p className="text-sm md:text-base text-Brand1">Email</p>
                                 <input
                                     name="email"
                                     type="email"
                                     required
-                                    placeholder="Enter Your Email "
-                                    className="border-b-2 bg-transparent placeholder:text-sm w-full outline-none appearance-none"
+                                    placeholder="Enter Your Email"
+                                    className="border-b-2 bg-transparent placeholder:text-sm md:placeholder:text-base w-full outline-none appearance-none"
                                 />
                             </div>
                         </div>
+
+                        {/* Message */}
                         <div className="flex flex-col items-start gap-2 w-full">
-                            <p className="text-sm text-Brand1">Message</p>
+                            <p className="text-sm md:text-base text-Brand1">Message</p>
                             <input
                                 name="message"
                                 required
-                                placeholder="Enter Your Needs "
-                                className="border-b-2 bg-transparent placeholder:text-sm w-full outline-none "
+                                placeholder="Enter Your Needs"
+                                className="border-b-2 bg-transparent placeholder:text-sm md:placeholder:text-base w-full outline-none"
                             />
                         </div>
 
-                        <button type="submit" className="flex flex-row gap-2 items-center justify-center bg-Brand1 text-black hover:text-White px-8 py-3 rounded-3xl">
+                        {/* Submit Button */}
+                        <button
+                            type="submit"
+                            className="flex flex-row gap-2 items-center justify-center bg-Brand1 text-black hover:text-white px-8 py-3 rounded-3xl text-sm md:text-base"
+                        >
                             <p>Send a Message</p>
                             <PaperPlaneTilt size={24} />
                         </button>
                     </form>
                 </div>
             </div>
-
         </div>
     )
 }
