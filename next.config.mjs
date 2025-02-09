@@ -3,7 +3,7 @@ export default {
       return [
         {
           source: '/',
-          destination: 'https://hendrian-yudha.vercel.app', // Subdomain baru
+          destination: '/home', // Subdomain baru
           permanent: true,
         },
       ]
