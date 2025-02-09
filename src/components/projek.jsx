@@ -16,7 +16,7 @@ const certificates = [
     title: "Landing Page di Praktikum Teknologi web",
     description: "Proyek membuat landing page menggunakan HTML, CSS, dan JS dan framewor tailwind.css",
     date: "2024",
-    image: "/project/Landing.png",
+    image: "/project/landing.png",
   },
   {
     title: "3D Blender",
