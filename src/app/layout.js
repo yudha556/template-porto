@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "My Portofolio",
+  title: "Hendrian Yudha Pratama",
   description: "Ini adalah portofolio saya",
 };
 

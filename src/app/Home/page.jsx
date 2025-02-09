@@ -301,12 +301,12 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <button
+                    {/* <button
                         className="text-black hover:text-White p-3 rounded-3xl px-6 bg-Brand1"
                         onClick={() => router.push("/Blog")}
                     >
                         View More
-                    </button>
+                    </button> */}
                 </div>
             </div>
 
