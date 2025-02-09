@@ -25,7 +25,7 @@ export default function Home() {
     };
 
     return (
-        <div className="h-full w-full bg-Bg1">
+        <div className="h-full w-full bg-Bg1 text-White">
 
             {/* header */}
             <div className="h-full w-full flex flex-row justify-center items-center px-4 md:px-16">
@@ -39,7 +39,7 @@ export default function Home() {
                     </div>
 
                     {/* Navigation (Home, Blog) */}
-                    <div className="flex flex-row gap-2 md:gap-4 text-sm md:text-lg">
+                    <div className="flex flex-row gap-2 md:gap-4 text-sm md:text-lg justify-center items-center">
                         <button
                             className={`relative font-mono ${currentPath === '/Home' ? 'text-Brand1' : 'text-white'} 
           ${isTransitioning ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
@@ -50,7 +50,7 @@ export default function Home() {
           ${currentPath === '/Home' ? 'scale-x-100' : 'scale-x-0'}`}></div>
                         </button>
 
-                        <button
+                        {/* <button
                             className={`relative font-mono ${currentPath === '/Blog' ? 'text-Brand1' : 'text-white'} 
           ${isTransitioning ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
                             onClick={() => router.push('/Blog')}
@@ -58,7 +58,7 @@ export default function Home() {
                             <h1>Blogs</h1>
                             <div className={`absolute bottom-0 left-0 w-full h-[2px] bg-Brand1 transform transition-transform duration-300 
           ${currentPath === '/Blog' ? 'scale-x-100' : 'scale-x-0'}`}></div>
-                        </button>
+                        </button> */}
                     </div>
 
                     {/* Sosial Media */}
