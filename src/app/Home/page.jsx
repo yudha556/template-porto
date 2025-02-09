@@ -105,7 +105,7 @@ export default function Home() {
                             <div className='flex flex-col justify-center items-center '>
                                 <img src='/profil.jpg' alt='profil' className='w-24 h-24 mb-2 rounded-full border-4 border-Brand1' />
                                 <h1 className='text-2xl font-semibold font-primary'>Yudha</h1>
-                                <h1 className='text-sm font-mono '>Full-Stack Dev</h1>
+                                <h1 className='text-sm font-mono '>Front-end Dev</h1>
                             </div>
 
                             <div className='flex flex-col justify-center items-start text-xm font-mono font-extralight gap-3'>
@@ -145,7 +145,7 @@ export default function Home() {
                                     <h1>Hey</h1>
                                     <h1>I'm <span className="text-Brand1">Yudha</span>,</h1>
                                     <div className="flex flex-col md:flex-row gap-2 md:items-center">
-                                        <h1>Full-Stack Developer </h1>
+                                        <h1>Front-end Developer </h1>
                                         <h1 className="text-sm text-Brand1 font-mono -translate-x-5 md:translate-x-0">&lt;/h1&gt;</h1>
                                     </div>
 
@@ -154,7 +154,7 @@ export default function Home() {
 
                             <div className="flex flex-col justify-between gap-3">
                                 <h1 className="text-Brand1 text-sm font-mono">&lt;p&gt;</h1>
-                                <h1 className="ml-[20px] font-mono md:text-lg text-sm">I help business grow by crafting amazing web experiences. If you're Looking for a developer that likes to get stuff done,</h1>
+                                <h1 className="ml-[20px] font-mono md:text-lg text-sm">Hi I can help your business by making your website look more amazing. if you need a developer contact me.</h1>
                                 <h1 className=" font-mono text-sm text-Brand1">&lt;/p&gt;</h1>
                             </div>
 
@@ -193,7 +193,7 @@ export default function Home() {
                         <div className="p-3 border-b-2 border-Brand1">
                             <h1 className="text-Brand1 md:text-5xl text-3xl font-primary tracking-wider">Sertificate</h1>
                         </div>
-                        <h1 className="md:text-sm text-xs font-mono ">I am striving to never stop learning and improving</h1>
+                        <h1 className="md:text-sm text-xs font-mono ">some of the certificates I obtained</h1>
                     </div>
                 </div>
 
@@ -233,7 +233,7 @@ export default function Home() {
                         <div className="p-3 border-b-2 border-Brand1">
                             <h1 className="text-Brand1 md:text-5xl text-3xl font-primary tracking-wider">Project</h1>
                         </div>
-                        <h1 className="md:text-sm text-xs font-mono ">I am striving to never stop learning and improving</h1>
+                        <h1 className="md:text-sm text-xs font-mono ">my best project</h1>
                     </div>
                 </div>
 
@@ -257,7 +257,7 @@ export default function Home() {
                         <div className="p-3 border-b-2 border-Brand1">
                             <h1 className="text-Brand1 md:text-5xl text-3xl font-primary tracking-wider">Blogs</h1>
                         </div>
-                        <h1 className="md:text-sm text-xs font-mono ">I am striving to never stop learning and improving</h1>
+                        <h1 className="md:text-sm text-xs font-mono ">some of my activities are on the blog page</h1>
                     </div>
                 </div>
 

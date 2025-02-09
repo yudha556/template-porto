@@ -11,24 +11,28 @@ const certificates = [
     description: "Dapat top 3 pada proyek akhir matakuliah",
     date: "2025",
     image: "/project/DashboardAdmin.png",
+    link: "https://administrator-orcin.vercel.app/",
   },
   {
     title: "Landing Page di Praktikum Teknologi web",
     description: "Proyek membuat landing page menggunakan HTML, CSS, dan JS dan framewor tailwind.css",
     date: "2024",
     image: "/project/landing.png",
+    link: "https://yudha556.github.io/Landing-Page-praktikum/"
   },
   {
     title: "3D Blender",
     description: "Proyek membuat cinematic menggunakan software 3D engine Blender",
     date: "2025",
     image: "/project/3D-Blender.png",
+    link: "./project/Blender.mp4",
   },
   {
     title: "First Create UI/UX my version",
     description: "Proyek membuat UI/UX versi saya",
     date: "2024",
     image: "/project/LandingPage.png",
+    link: "https://www.figma.com/design/NCUaGrdr2tKPQ8KfYtVJih/Landing-Page-Blue-Sky?node-id=0-1&t=KLxqJfHFcLsaxB9I-1"
   },
   // Tambahkan sertifikat lainnya di sini
 ];
@@ -53,22 +57,24 @@ const Project = () => {
       >
         {certificates.map((certificate, index) => (
           <SwiperSlide key={index}>
-            <div className="rounded-lg shadow-lg p-4 flex flex-col justify-center items-center mb-10">
-              <img
-                src={certificate.image}
-                alt={certificate.title}
-                className="max-w-full h-auto object-contain max-h-96"
-              />
-              <h3 className="text-lg font-semibold mt-4 text-center">
-                {certificate.title}
-              </h3>
-              <p className="text-gray-600 text-center">
-                {certificate.description}
-              </p>
-              <span className="text-sm text-gray-500 text-center">
-                {certificate.date}
-              </span>
-            </div>
+            <a href={certificate.link} target="_blank" rel="noopener noreferrer" className="block">
+              <div className="rounded-lg shadow-lg p-4 flex flex-col justify-center items-center mb-10 cursor-pointer hover:bg-black transition-all duration-300">
+                <img
+                  src={certificate.image}
+                  alt={certificate.title}
+                  className="max-w-full h-auto object-contain max-h-96  hover:rounded-lg transition-all duration-300"
+                />
+                <h3 className="text-lg font-semibold mt-4 text-center">
+                  {certificate.title}
+                </h3>
+                <p className="text-gray-600 text-center">
+                  {certificate.description}
+                </p>
+                <span className="text-sm text-gray-500 text-center">
+                  {certificate.date}
+                </span>
+              </div>
+            </a>
           </SwiperSlide>
         ))}
       </Swiper>
