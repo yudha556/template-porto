@@ -3,7 +3,7 @@ export default {
       return [
         {
           source: '/',
-          destination: '/home', // Subdomain baru
+          destination: '/Home', 
           permanent: true,
         },
       ]
