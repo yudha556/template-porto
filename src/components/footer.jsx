@@ -29,7 +29,7 @@ export default function footer() {
                 </button>
             </div>
             <div className="text-xs font-thin tracking-wide">
-                <h1>Slicing Design By JohhanLeon</h1>
+                <h1 className="text-white ">Create With <span className="font-bold ml-2 underline">Next.js</span></h1>
             </div>
         </div>
     )

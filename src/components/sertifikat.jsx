@@ -8,20 +8,20 @@ import "@/app/globals.css";
 
 const certificates = [
   {
-    title: "Juara 3 Game Development",
-    description: "Fokus di bagian desain 3D untuk game nasional.",
+    title: "3rd place  in game development competition",
+    description: "my 3d design part in the development of this project",
     date: "2024",
     image: "/sertifikat/game-dev.png",
   },
   {
     title: "Cyber Scurity Seminar",
-    description: "Mengikuti seminar nasional yang di selenggarakan oleh JH (Jadi Hackers)",
+    description: "following the national seminar organized by jh",
     date: "2024",
     image: "/sertifikat/JH.png",
   },
   {
     title: "UI/UX Seminar",
-    description: "Mengikuti seminar nasional yang di selenggarakan oleh Himasi UAD",
+    description: "Following the national seminar organized by jh",
     date: "2023",
     image: "/sertifikat/semnas-UI-UX.png",
   },

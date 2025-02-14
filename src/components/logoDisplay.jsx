@@ -22,6 +22,7 @@ const CategoryDisplay = () => {
       { src: '/skill/nextjs.svg', alt: 'Next.js' },
       { src: '/skill/Github.svg', alt: 'Github' },
       { src: '/skill/python.svg', alt: 'Python' },
+      { src: '/skill/firebase.svg', alt: 'Firebase' },
     ],
     uiux: [
       { src: '/skill/figma.svg', alt: 'Figma' },

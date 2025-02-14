@@ -245,10 +245,10 @@ export default function Home() {
             </div>
 
             {/* Blogs */}
-            <div className="h-full w-full bg-Bg1 flex flex-col justify-center items-center px-4 md:px-16 mb-16">
+            {/* <div className="h-full w-full bg-Bg1 flex flex-col justify-center items-center px-4 md:px-16 mb-16"> */}
                 {/* Header Section */}
-                <div className="flex flex-col gap-7 py-24">
-                    <div className="flex flex-col items-center justify-center gap-3  ">
+                {/* <div className="flex flex-col gap-7 py-24"> */}
+                    {/* <div className="flex flex-col items-center justify-center gap-3  ">
                         <img src="/asset/mouse.svg" alt="mouse" className="md:w-7 w-5" />
                         <img src="/asset/Line.svg" alt="line" className="md:w-3 w-2" />
                     </div>
@@ -258,22 +258,22 @@ export default function Home() {
                             <h1 className="text-Brand1 md:text-5xl text-3xl font-primary tracking-wider">Blogs</h1>
                         </div>
                         <h1 className="md:text-sm text-xs font-mono ">some of my activities are on the blog page</h1>
-                    </div>
-                </div>
+                    </div> */}
+                {/* </div> */}
 
 
                 {/* Blog Card Section */}
-                <div className="flex flex-col justify-center items-center px-4 md:px-16 -mt-4 md:-mt-10 gap-8">
-                    <div className="flex flex-col lg:flex-row w-full border-t-2 border-b-2 gap-8 md:gap-20 py-10 px-4 md:px-16 items-center justify-between">
+                {/* <div className="flex flex-col justify-center items-center px-4 md:px-16 -mt-4 md:-mt-10 gap-8"> */}
+                    {/* <div className="flex flex-col lg:flex-row w-full border-t-2 border-b-2 gap-8 md:gap-20 py-10 px-4 md:px-16 items-center justify-between"> */}
                         {/* Image */}
-                        <img
+                        {/* <img
                             src="/Blog/Demis.JPG"
                             alt="profile"
                             className="w-full md:w-auto max-w-full h-auto object-contain max-h-52"
-                        />
+                        /> */}
                         {/* Content */}
-                        <div className="flex flex-col gap-5 w-full items-start">
-                            <h1 className="text-Brand1 font-primary text-xl md:text-2xl font-normal">
+                        {/* <div className="flex flex-col gap-5 w-full items-start"> */}
+                            {/* <h1 className="text-Brand1 font-primary text-xl md:text-2xl font-normal">
                                 Demisioner HMPS-SI UAD Periode 2024
                             </h1>
                             <p className="text-sm tracking-wide font-light font-primary">
@@ -285,8 +285,8 @@ export default function Home() {
                                 onClick={() => router.push("/Blog/Demisioner")}
                             >
                                 Read More &gt;&gt;
-                            </button>
-                            <div className="flex flex-wrap gap-4 text-sm items-center tracking-wide">
+                            </button> */}
+                            {/* <div className="flex flex-wrap gap-4 text-sm items-center tracking-wide">
                                 <label className="py-1 px-3 rounded-2xl bg-Grey">Activity</label>
                                 <h1 className="font-light">
                                     <span className="font-bold mx-1">Text</span>Yudha
@@ -297,9 +297,9 @@ export default function Home() {
                                 <h1 className="font-light">
                                     <span className="font-bold mx-1">Read</span>1 Min
                                 </h1>
-                            </div>
-                        </div>
-                    </div>
+                            </div> */}
+                        {/* </div> */}
+                    {/* </div> */}
 
                     {/* <button
                         className="text-black hover:text-White p-3 rounded-3xl px-6 bg-Brand1"
@@ -307,12 +307,12 @@ export default function Home() {
                     >
                         View More
                     </button> */}
-                </div>
-            </div>
+                {/* </div> */}
+            {/* </div> */}
 
 
             {/* Contact */}
-            <div className="h-full w-full bg-Bg2 flex flex-col justify-center items-center px-4 md:px-16 mb-16">
+            <div className="h-full w-full bg-Bg1 flex flex-col justify-center items-center px-4 md:px-16 mb-16">
                 {/* Header Section */}
                 <div className="flex flex-col gap-7 py-12 md:py-24">
                     <div className="flex flex-col items-center justify-center gap-3">

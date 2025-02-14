@@ -7,29 +7,29 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const certificates = [
   {
-    title: "Proyek akhir matakuliah",
-    description: "Dapat top 3 pada proyek akhir matakuliah",
+    title: "Last Course Project",
+    description: "get top 3 in last project teknology web in university",
     date: "2025",
     image: "/project/DashboardAdmin.png",
     link: "https://administrator-orcin.vercel.app/",
   },
   {
-    title: "Landing Page di Praktikum Teknologi web",
-    description: "Proyek membuat landing page menggunakan HTML, CSS, dan JS dan framewor tailwind.css",
+    title: "Landing Page in Praktikum Teknologi web",
+    description: "Building project page with HTML and Tailwindcss framework",
     date: "2024",
     image: "/project/landing.png",
     link: "https://yudha556.github.io/Landing-Page-praktikum/"
   },
   {
     title: "3D Blender",
-    description: "Proyek membuat cinematic menggunakan software 3D engine Blender",
+    description: "Building 3D model with blender",
     date: "2025",
     image: "/project/3D-Blender.png",
     link: "./project/Blender.mp4",
   },
   {
     title: "First Create UI/UX my version",
-    description: "Proyek membuat UI/UX versi saya",
+    description: "Build UI/UX with Figma",
     date: "2024",
     image: "/project/LandingPage.png",
     link: "https://www.figma.com/design/NCUaGrdr2tKPQ8KfYtVJih/Landing-Page-Blue-Sky?node-id=0-1&t=KLxqJfHFcLsaxB9I-1"
